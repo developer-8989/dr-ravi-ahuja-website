@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Ravi S. Aahuja | Ayurvedic Clinic</title>
+<meta name="description" content="Dr. Ravi S. Aahuja Ayurvedic Clinic in Pachora, Maharashtra. Clinic information, location and contact details.">
+<style>
+:root{
+  --green:#176b52;--green2:#0f4d3b;--gold:#c79a52;--cream:#f7f4ec;
+  --ink:#17342c;--muted:#66756f;--white:#fff;--line:#e4e8e4;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{height:74px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800}
+.logo{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--green);color:#fff;font-size:18px;box-shadow:0 8px 22px #176b5225}
+.brand small{display:block;color:var(--muted);font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.links{display:flex;gap:26px;align-items:center;font-size:14px;font-weight:650}
+.links a:hover{color:var(--green)}
+.menu{display:none;border:0;background:none;font-size:28px;color:var(--green);cursor:pointer}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 20px;border-radius:999px;font-weight:750;font-size:14px;border:1px solid transparent;transition:.2s}
+.btn.primary{background:var(--green);color:#fff;box-shadow:0 10px 25px #176b5230}
+.btn.primary:hover{background:var(--green2);transform:translateY(-1px)}
+.btn.light{background:#fff;color:var(--green);border-color:#dce5df}
+.hero{background:radial-gradient(circle at 85% 20%,#d9eadf 0,transparent 34%),linear-gradient(135deg,#f5f8f3,#edf5ef);padding:84px 0 78px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:55px;align-items:center}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;background:#e0eee7;color:var(--green);padding:7px 12px;border-radius:999px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+h1{font-family:Georgia,serif;font-size:clamp(42px,6vw,72px);line-height:1.03;letter-spacing:-.045em;margin:20px 0 20px}
+.hero p{font-size:18px;color:#53645d;max-width:620px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.hero-card{background:#fff;border:1px solid #e0e8e2;border-radius:28px;padding:28px;box-shadow:0 24px 60px #153b2b16}
+.leaf-art{height:280px;border-radius:22px;background:linear-gradient(145deg,#e4f0e8,#f9f6ea);display:grid;place-items:center;position:relative;overflow:hidden}
+.leaf-art:before,.leaf-art:after{content:"";position:absolute;border:1px solid #176b5220;border-radius:100% 0 100% 0;transform:rotate(35deg)}
+.leaf-art:before{width:150px;height:220px;background:#176b5214}
+.leaf-art:after{width:90px;height:145px;background:#c79a5212;transform:rotate(-35deg)}
+.ayur-symbol{font-size:86px;z-index:2}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+.stat{padding:14px;background:var(--cream);border-radius:16px;text-align:center}
+.stat strong{display:block;font-size:18px;color:var(--green)}
+.stat span{font-size:11px;color:var(--muted)}
+section{padding:88px 0}
+.section-head{max-width:700px;margin-bottom:38px}
+.kicker{color:var(--gold);font-weight:850;text-transform:uppercase;letter-spacing:.12em;font-size:12px}
+h2{font-family:Georgia,serif;font-size:clamp(32px,4vw,48px);line-height:1.12;margin:8px 0 12px}
+.section-head p{color:var(--muted)}
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center}
+.about-box{background:var(--green);color:#fff;border-radius:28px;padding:36px;min-height:320px;display:flex;flex-direction:column;justify-content:space-between}
+.about-box .mark{font-size:58px}
+.about-box p{color:#dcebe5}
+.notice{border-left:3px solid var(--gold);padding-left:18px;color:#53645d}
+.services{background:var(--cream)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:25px;transition:.2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px #153b2b12}
+.icon{width:48px;height:48px;border-radius:14px;background:#e5f0e9;color:var(--green);display:grid;place-items:center;font-size:23px;margin-bottom:18px}
+.card h3{margin-bottom:7px;font-size:18px}
+.card p{font-size:14px;color:var(--muted)}
+.location{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.info{display:grid;gap:14px}
+.info-card{padding:21px;border:1px solid var(--line);border-radius:18px}
+.info-card b{display:block;margin-bottom:3px}
+.info-card span{color:var(--muted);font-size:14px}
+.map{min-height:390px;border:0;border-radius:24px;overflow:hidden;box-shadow:0 18px 45px #153b2b12}
+.map iframe{width:100%;height:100%;min-height:390px;border:0}
+.faq{background:#f7f9f7}
+details{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin-bottom:12px}
+summary{font-weight:750;cursor:pointer}
+details p{color:var(--muted);padding-top:10px;font-size:14px}
+.cta{background:var(--green);color:#fff;border-radius:30px;padding:48px;display:flex;justify-content:space-between;align-items:center;gap:25px}
+.cta p{color:#dcebe5;max-width:650px}
+footer{background:#103f32;color:#dcebe5;padding:35px 0}
+.footer-grid{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer small{color:#a9c3ba}
+.disclaimer{font-size:12px;color:#a9c3ba;max-width:780px;margin-top:18px}
+.float{position:fixed;right:20px;bottom:20px;background:var(--green);color:#fff;border-radius:999px;padding:13px 18px;font-weight:800;box-shadow:0 12px 30px #0003;z-index:30}
+@media(max-width:800px){
+  .links{display:none;position:absolute;top:74px;left:0;right:0;background:#fff;padding:18px 4%;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}
+  .links.open{display:flex}.menu{display:block}
+  .hero{padding:58px 0}.hero-grid,.about,.location{grid-template-columns:1fr}
+  .hero-card{order:-1}.cards{grid-template-columns:1fr}.cta{padding:30px;flex-direction:column;align-items:flex-start}
+  section{padding:65px 0}h1{font-size:46px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home">
+      <span class="logo">RSA</span>
+      <span>Dr. Ravi S. Aahuja<small>Ayurvedic Clinic · Pachora</small></span>
+    </a>
+    <nav class="links" id="links">
+      <a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a>
+      <a href="#location">Location</a><a href="#faq">FAQ</a>
+    </nav>
+    <button class="menu" id="menu" aria-label="Open menu">☰</button>
+  </div>
+</header>
+
+<main id="home">
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">🌿 Ayurvedic Clinic · Pachora</span>
+      <h1>Traditional care, thoughtfully presented.</h1>
+      <p>A clean digital home for Dr. Ravi S. Aahuja's Ayurvedic clinic in Sindhi Colony, Bahiram Nagar, Pachora.</p>
+      <div class="actions">
+        <a class="btn primary" href="#location">📍 Get Directions</a>
+        <a class="btn light" href="#contact">Contact Clinic</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="leaf-art"><div class="ayur-symbol">🌿</div></div>
+      <div class="stats">
+        <div class="stat"><strong>4.5★</strong><span>Listed rating</span></div>
+        <div class="stat"><strong>Pachora</strong><span>Maharashtra</span></div>
+        <div class="stat"><strong>Mon–Sat</strong><span>Listed hours</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container about">
+    <div class="about-box">
+      <div class="mark">ॐ</div>
+      <div><h2>Dr. Ravi S. Aahuja</h2><p>Ayurvedic Clinic · Sindhi Colony, Bahiram Nagar, Pachora Rural</p></div>
+    </div>
+    <div>
+      <span class="kicker">About the clinic</span>
+      <h2>A local clinic with a simple, welcoming online presence.</h2>
+      <p class="notice">Public listings identify the practice as an Ayurvedic clinic in Pachora. Doctor qualifications, registration details and a definitive service list were not independently verified, so this preview deliberately avoids making unsupported medical claims.</p>
+      <p style="margin-top:20px;color:#66756f">Once the doctor confirms the details, this section can be expanded with verified qualifications, professional experience, clinic photographs and the exact services offered.</p>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="services">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Clinic information</span>
+      <h2>What you can add after confirmation</h2>
+      <p>These are website categories, not claims that these services are currently offered by the clinic.</p>
+    </div>
+    <div class="cards">
+      <article class="card"><div class="icon">🩺</div><h3>Ayurvedic Consultation</h3><p>Section reserved for the doctor's confirmed consultation services and approach.</p></article>
+      <article class="card"><div class="icon">🌿</div><h3>Ayurvedic Therapies</h3><p>Exact therapies can be listed here after the clinic confirms what is available.</p></article>
+      <article class="card"><div class="icon">📋</div><h3>Personalized Guidance</h3><p>Space for verified information about lifestyle, wellness or follow-up guidance.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="location">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Visit the clinic</span>
+      <h2>Find us in Pachora.</h2>
+      <p>The location below is based on the public listing and the map location supplied for this website preview.</p>
+    </div>
+    <div class="location">
+      <div class="info">
+        <div class="info-card"><b>📍 Address</b><span>M988+3P2, Sindhi Colony, Bahiram Nagar, Pachora Rural, Maharashtra 424201</span></div>
+        <div class="info-card"><b>🕐 Listed hours</b><span>Monday–Saturday · 10:30 AM–2:00 PM<br>Sunday · Closed</span></div>
+        <div class="info-card"><b>⭐ Public listing</b><span>4.5/5 rating from 2 reviews (directory listing)</span></div>
+        <a class="btn primary" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=20.6651328,75.3667705">Open in Google Maps ↗</a>
+      </div>
+      <div class="map">
+        <iframe loading="lazy" src="https://maps.google.com/maps?q=20.6651328,75.3667705&z=15&output=embed" title="Dr. Ravi S. Aahuja clinic location"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="faq">
+  <div class="container">
+    <div class="section-head"><span class="kicker">FAQ</span><h2>Before your visit</h2></div>
+    <details><summary>How do I find the clinic?</summary><p>Use the Google Maps button above and navigate to the listed location at M988+3P2, Sindhi Colony, Bahiram Nagar, Pachora Rural.</p></details>
+    <details><summary>What are the clinic hours?</summary><p>The directory information used for this preview lists Monday–Saturday, 10:30 AM–2:00 PM. Please confirm the current timing with the clinic before publishing the final website.</p></details>
+    <details><summary>Can I book an appointment online?</summary><p>This preview does not claim an online booking system. A phone/WhatsApp appointment button can be added once the clinic confirms its official contact number.</p></details>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="cta">
+      <div><span class="kicker" style="color:#e5c98e">Contact</span><h2>Ready to make this the real clinic website?</h2><p>Replace the placeholders with doctor-approved qualifications, services, photographs and official contact details before publishing.</p></div>
+      <a class="btn light" href="#location">View Location</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div><strong>Dr. Ravi S. Aahuja · Ayurvedic Clinic</strong><br><small>Pachora, Maharashtra</small></div>
+    <small>Website preview · 2026</small>
+  </div>
+  <div class="container disclaimer">Disclaimer: This website is an informational design preview. It is not a medical advice service. Qualifications, registration, services, contact details and clinic timings should be verified and approved by the doctor before publication.</div>
+</footer>
+
+<a class="float" href="#location">📍 Directions</a>
+
+<script>
+const menu=document.getElementById('menu'),links=document.getElementById('links');
+menu.addEventListener('click',()=>links.classList.toggle('open'));
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+</script>
+</body>
+</html>
